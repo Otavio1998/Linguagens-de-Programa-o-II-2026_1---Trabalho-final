@@ -55,14 +55,14 @@ int ast_count_nodes(const ast_node_t *node)
     /* Percorre todos os filhos */
     for (int i = 0; i < AST_MAX_CHILDREN; i++) {
         if(node->children[i] != NULL) {
-            count += ast_count_nodes(node->children[i]); } 
-        
-        if(node->next != NULL){
-            count += ast_count_nodes(node->next);
+            count += ast_count_nodes(node->children[i]);
         }
     }
+
     /* TODO-E: adicione aqui a contagem recursiva via 'next' */
-    /* count += ast_count_nodes(node->next); */  /* <-- descomente e ajuste */
+    if(node->next != NULL){
+        count += ast_count_nodes(node->next);
+    }
 
     return count;
 }
@@ -78,25 +78,27 @@ int ast_count_nodes(const ast_node_t *node)
 int ast_count_leaves(const ast_node_t *node)
 {
     /* TODO-F: implementar */
-    int count = 0, is_leaf = 0;
+    if (node == NULL) return 0;
+
+    int is_leaf = 1;
     for(int i=0; i <  AST_MAX_CHILDREN; i++){
         if (node->children[i] != NULL){
             is_leaf = 0;
             break;
         }
     }
-
-    if(is_leaf){
-        return 1;
+    if (node->next != NULL) {
+        is_leaf = 0;
     }
 
+    int count = is_leaf ? 1 : 0;
 
     for(int i=0; i< AST_MAX_CHILDREN; i++){
         count += ast_count_leaves(node->children[i]);
     }
+    count += ast_count_leaves(node->next);
 
     return count;
-
 }
 
 /* -----------------------------------------------------------------------
@@ -115,27 +117,21 @@ static int max(int a, int b) { return (a > b) ? a : b; }
 int ast_max_depth(const ast_node_t *node)
 {
     /* TODO-G: implementar */
-    (void)node;
-    int max_deph = 0;
-    
     if(node == NULL){
         return 0;
     }
 
-    else {
-        max_deph = 1;
-    }
+    int max_deph = 0;
 
     for(int i=0; i< AST_MAX_CHILDREN; i++){
         if(node->children[i] != NULL){
-            int current = ast_max_depth(node->children[i]);
-
-            max_deph = max(current, max_deph);
+            max_deph = max(max_deph, 1 + ast_max_depth(node->children[i]));
         }
     }
-    return max_deph;
 
-    // FAZER DFS
+    max_deph = max(max_deph, ast_max_depth(node->next));
+
+    return max_deph;
 }
 
 /* -----------------------------------------------------------------------

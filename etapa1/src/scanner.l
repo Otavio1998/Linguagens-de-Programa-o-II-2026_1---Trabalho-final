@@ -47,13 +47,11 @@ INT         {DIGIT}+
  * Versão atual: aceita  d*.d+  ou  d+.d*  (sem expoente).
  * Expoente a adicionar: (e|E)(+|-)?{DIGIT}+
  */
-FLOAT       {DIGIT}*"."{DIGIT}+ | {DIGIT}+"."{DIGIT}* | {DIGIT}+"."{DIGIT}*(e|E)(+|-)?{DIGIT}+ | {DIGIT}*"."{DIGIT}+(e|E)(+|-)?{DIGIT}+
+FLOAT       ({DIGIT}*"."{DIGIT}+|{DIGIT}+"."{DIGIT}*)([eE][+-]?{DIGIT}+)?
 
 %%
 
-[ \n]+      { /* TODO-A: adicione \t e \r — espaço em branco incompleto */ }
-[ \t]+
-[ \r]+
+[ \n\t\r]+      { /* TODO-A: adicione \t e \r — espaço em branco incompleto */ }
 
 "//".*      { }
 
