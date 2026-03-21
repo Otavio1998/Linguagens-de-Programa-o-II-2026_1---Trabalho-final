@@ -55,9 +55,11 @@ int ast_count_nodes(const ast_node_t *node)
     /* Percorre todos os filhos */
     for (int i = 0; i < AST_MAX_CHILDREN; i++) {
         if(node->children[i] != NULL) {
-            count += ast_count_nodes(node->children[i]); }
-        else 
+            count += ast_count_nodes(node->children[i]); } 
+        
+        if(node->next != NULL){
             count += ast_count_nodes(node->next);
+        }
     }
     /* TODO-E: adicione aqui a contagem recursiva via 'next' */
     /* count += ast_count_nodes(node->next); */  /* <-- descomente e ajuste */
@@ -76,16 +78,25 @@ int ast_count_nodes(const ast_node_t *node)
 int ast_count_leaves(const ast_node_t *node)
 {
     /* TODO-F: implementar */
-    if (node == NULL)
-        return 0;
+    int count = 0, is_leaf = 0;
+    for(int i=0; i <  AST_MAX_CHILDREN; i++){
+        if (node->children[i] != NULL){
+            is_leaf = 0;
+            break;
+        }
+    }
 
-    int count = 1;
+    if(is_leaf){
+        return 1;
+    }
 
-    for (int i = 0; i < AST_MAX_CHILDREN; i++) {
-        
+
+    for(int i=0; i< AST_MAX_CHILDREN; i++){
+        count += ast_count_leaves(node->children[i]);
     }
 
     return count;
+
 }
 
 /* -----------------------------------------------------------------------
