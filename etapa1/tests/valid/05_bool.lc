@@ -1,0 +1,24 @@
+/* 05_bool.lc — Literais booleanos e operador de negação
+ * Testa: literais true/false, variáveis bool, negação '!', comparação com bool.
+ * Requer TODO-C para que && e || construam nós AST corretos.
+ */
+
+bool flag ;
+
+fun bool nao(bool x) {
+    return !x ;
+}
+
+fun void main() {
+    let a := true ;
+    let b := false ;
+    flag := true ;
+    if (!b) {
+        print a ;
+    }
+    if (a == true) {
+        print flag ;
+    } else {
+        print b ;
+    }
+}

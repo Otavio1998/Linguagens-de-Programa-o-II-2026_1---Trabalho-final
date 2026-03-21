@@ -1,0 +1,8 @@
+/* 01_hello.lc — Programa mais simples possível em LC-
+ * Apenas uma função main que imprime uma mensagem.
+ * Deve ser reconhecido sem erros.
+ */
+
+fun void main() {
+    print "Ola, mundo!" ;
+}

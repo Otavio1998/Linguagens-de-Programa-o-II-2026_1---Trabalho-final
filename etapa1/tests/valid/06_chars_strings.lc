@@ -1,0 +1,13 @@
+/* 06_chars_strings.lc — Literais char e string, comando print
+ * Testa: literal char ('a'), literal string ("texto"), print de string,
+ *        atribuição de char e string.
+ */
+
+fun void main() {
+    let c := 'z' ;
+    let s := "compiladores" ;
+    print "INF01083 - LC-" ;
+    print c ;
+    print s ;
+    read c ;
+}

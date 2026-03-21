@@ -1,0 +1,23 @@
+/* 02_expr.lc — Expressões aritméticas e atribuição
+ * Testa: variáveis globais, atribuição :=, expressões com operadores,
+ *        precedência e parênteses.
+ */
+
+int x ;
+int y ;
+float z ;
+
+fun int soma(int a, int b) {
+    return a + b ;
+}
+
+fun void main() {
+    let x := 10 ;
+    let y := 20 ;
+    let z := 3.14 ;
+    x := x + y * 2 ;
+    y := (x - 1) % 7 ;
+    z := z * 2.0 ;
+    print x ;
+    print y ;
+}

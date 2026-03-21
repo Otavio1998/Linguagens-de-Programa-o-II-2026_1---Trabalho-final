@@ -1,0 +1,40 @@
+/* 04_arrays.lc — Arrays e funções com parâmetros
+ * Testa: declaração de array, indexação, múltiplos parâmetros,
+ *        chamada de função com argumentos, return com expressão.
+ * Também testa números float com expoente (TODO-B do scanner).
+ */
+
+array 10 of int v ;
+array 5  of float w ;
+
+fun int soma_array(int n) {
+    let s := 0 ;
+    let i := 0 ;
+    while (i < n) do {
+        s := s + v[i] ;
+        i := i + 1 ;
+    }
+    return s ;
+}
+
+fun float media(int n) {
+    let s := soma_array(n) ;
+    /* número com expoente — requer TODO-B do scanner */
+    let fator := 1.0e0 ;
+    return fator * s ;
+}
+
+fun void inicializa() {
+    v[0] := 1 ;
+    v[1] := 2 ;
+    v[2] := 3 ;
+    /* float com expoente negativo */
+    w[0] := 6.02e23 ;
+    w[1] := 1.5e-3 ;
+}
+
+fun void main() {
+    inicializa() ;
+    let total := soma_array(3) ;
+    print total ;
+}

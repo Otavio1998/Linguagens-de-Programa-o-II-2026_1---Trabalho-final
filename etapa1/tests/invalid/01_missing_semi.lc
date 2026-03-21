@@ -1,0 +1,7 @@
+/* 01_missing_semi.lc — INVÁLIDO: falta ';' após comando print
+ * Erro esperado: syntax error
+ */
+
+fun void main() {
+    print "ola"
+}
