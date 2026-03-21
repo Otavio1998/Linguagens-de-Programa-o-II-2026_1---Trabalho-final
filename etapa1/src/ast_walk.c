@@ -116,8 +116,24 @@ int ast_max_depth(const ast_node_t *node)
 {
     /* TODO-G: implementar */
     (void)node;
-    (void)max;   /* evita warning — remova ao implementar */
-    return 0;
+    int max_deph = 0;
+    
+    if(node == NULL){
+        return 0;
+    }
+
+    else {
+        max_deph = 1;
+    }
+
+    for(int i=0; i< AST_MAX_CHILDREN; i++){
+        if(node->children[i] != NULL){
+            int current = ast_max_depth(node->children[i]);
+
+            max_deph = max(current, max_deph);
+        }
+    }
+    return max_deph;
 
     // FAZER DFS
 }

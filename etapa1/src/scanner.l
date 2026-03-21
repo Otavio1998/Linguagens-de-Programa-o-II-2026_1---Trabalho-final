@@ -47,7 +47,7 @@ INT         {DIGIT}+
  * Versão atual: aceita  d*.d+  ou  d+.d*  (sem expoente).
  * Expoente a adicionar: (e|E)(+|-)?{DIGIT}+
  */
-    FLOAT       {DIGIT}*"."{DIGIT}+ | {DIGIT}+"."{DIGIT}* | {DIGIT}+"."{DIGIT}*(e|E)(+|-)?{DIGIT}+ | {DIGIT}*"."{DIGIT}+(e|E)(+|-)?{DIGIT}+
+FLOAT       {DIGIT}*"."{DIGIT}+ | {DIGIT}+"."{DIGIT}* | {DIGIT}+"."{DIGIT}*(e|E)(+|-)?{DIGIT}+ | {DIGIT}*"."{DIGIT}+(e|E)(+|-)?{DIGIT}+
 
 %%
 
