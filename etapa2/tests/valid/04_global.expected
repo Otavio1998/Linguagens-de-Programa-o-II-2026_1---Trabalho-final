@@ -1,0 +1,12 @@
+    global contador, 4
+    global pi, 8
+    beginFunc incrementa
+    _t1 = contador + 1
+    contador = _t1
+    endFunc incrementa
+    beginFunc main
+    contador = 0
+    pi = 3.14
+    call incrementa 0
+    print contador
+    endFunc main

@@ -1,0 +1,18 @@
+    beginFunc main
+    local x, 0
+    x = 5
+    local y, 4
+    y = 10
+    local lt, 8
+    _t1 = x < y
+    lt = _t1
+    local eq, 12
+    _t2 = x == y
+    eq = _t2
+    local ne, 16
+    _t3 = x != y
+    ne = _t3
+    print lt
+    print eq
+    print ne
+    endFunc main

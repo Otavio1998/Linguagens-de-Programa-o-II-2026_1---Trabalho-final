@@ -1,0 +1,11 @@
+/* 05_array.lc — Acesso a arrays (load/store)
+ * Testa: TAC_LOAD (leitura) e TAC_STORE (escrita)
+ */
+array 5 of int v ;
+
+fun void main() {
+    v[0] := 10 ;
+    v[1] := 20 ;
+    v[2] := v[0] + v[1] ;
+    print v[2] ;
+}

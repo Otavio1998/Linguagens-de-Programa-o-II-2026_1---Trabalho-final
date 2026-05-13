@@ -1,0 +1,4 @@
+/* Usa = em vez de := (erro sintático em LC-) */
+fun void main() {
+    let x = 10 ;
+}

@@ -1,0 +1,17 @@
+/* 04_global.lc — Variáveis globais
+ * Testa: declaração global com offset 0, 4, 8...
+ * e uso em funções
+ */
+int contador ;
+float pi ;
+
+fun void incrementa() {
+    contador := contador + 1 ;
+}
+
+fun void main() {
+    contador := 0 ;
+    pi := 3.14 ;
+    incrementa() ;
+    print contador ;
+}

@@ -1,0 +1,14 @@
+    beginFunc main
+    local a, 0
+    a = 10
+    local b, 4
+    b = 3
+    _t1 = a + b
+    a = _t1
+    _t2 = b - 1
+    b = _t2
+    local c, 8
+    _t3 = a - b
+    c = _t3
+    print c
+    endFunc main

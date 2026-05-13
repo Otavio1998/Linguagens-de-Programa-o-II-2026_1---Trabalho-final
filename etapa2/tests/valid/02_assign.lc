@@ -1,0 +1,11 @@
+/* 02_assign.lc — Atribuições simples e compostas
+ * Testa: :=  +=  -=
+ */
+fun void main() {
+    let a := 10 ;
+    let b := 3 ;
+    a += b ;
+    b -= 1 ;
+    let c := a - b ;
+    print c ;
+}

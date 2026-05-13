@@ -1,0 +1,13 @@
+/* 03_relacional.lc — Operadores relacionais em atribuição
+ * Testa: <, >, <=, >=, ==, != (resultado 0 ou 1)
+ */
+fun void main() {
+    let x := 5 ;
+    let y := 10 ;
+    let lt := x < y ;
+    let eq := x == y ;
+    let ne := x != y ;
+    print lt ;
+    print eq ;
+    print ne ;
+}

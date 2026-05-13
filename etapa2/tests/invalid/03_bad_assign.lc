@@ -1,0 +1,8 @@
+/* 03_bad_assign.lc — INVÁLIDO: usa '=' em vez de ':=' na declaração local
+ * Erro esperado: syntax error (LC- exige ':=' para atribuição)
+ */
+
+fun void main() {
+    let x = 5 ;
+    print x ;
+}

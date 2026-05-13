@@ -1,0 +1,11 @@
+    beginFunc main
+    local x, 0
+    _t1 = 4 * 2
+    _t2 = 3 + _t1
+    x = _t2
+    local y, 4
+    _t3 = x * x
+    _t4 = _t3 - 1
+    y = _t4
+    print y
+    endFunc main

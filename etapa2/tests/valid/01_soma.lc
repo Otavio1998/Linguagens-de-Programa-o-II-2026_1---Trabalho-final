@@ -1,0 +1,9 @@
+/* 01_soma.lc — Expressões aritméticas simples
+ * TAC esperado: temporários _t1, _t2 para subexpressões
+ * Resultado: let x := 3 + 4 * 2  →  _t1 = 4 * 2; _t2 = 3 + _t1; x = _t2
+ */
+fun void main() {
+    let x := 3 + 4 * 2 ;
+    let y := x * x - 1 ;
+    print y ;
+}
