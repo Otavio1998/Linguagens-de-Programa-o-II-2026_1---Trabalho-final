@@ -1,0 +1,12 @@
+/* 03_while.lc — laço while
+ * TAC esperado: rótulo de início, salto condicional, goto de volta
+ */
+fun void main() {
+    let i := 0 ;
+    let soma := 0 ;
+    while (i < 5) do {
+        soma := soma + i ;
+        i := i + 1 ;
+    }
+    print soma ;
+}

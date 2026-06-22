@@ -1,0 +1,14 @@
+/* 05_and_or.lc — Booleanos com curto-circuito
+ * Testa: && gera ifFalse na primeira parte
+ *        || gera ifTrue na primeira parte
+ */
+fun void main() {
+    let a := 5 ;
+    let b := 10 ;
+    if (a > 0 && b < 20) {
+        print 1 ;
+    }
+    if (a == 0 || b > 5) {
+        print 2 ;
+    }
+}

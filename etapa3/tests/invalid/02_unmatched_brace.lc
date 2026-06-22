@@ -1,0 +1,7 @@
+/* 02_unmatched_brace.lc — INVÁLIDO: chave '{' sem fechar
+ * Erro esperado: syntax error (fim inesperado de arquivo)
+ */
+
+fun void main() {
+    print "ola" ;
+

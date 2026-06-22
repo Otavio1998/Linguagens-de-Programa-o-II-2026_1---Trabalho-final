@@ -1,0 +1,8 @@
+/* 05_lex_error.lc — INVÁLIDO: caractere inválido '@'
+ * Erro esperado: erro léxico seguido de syntax error
+ */
+
+fun void main() {
+    let x := @5 ;
+    print x ;
+}

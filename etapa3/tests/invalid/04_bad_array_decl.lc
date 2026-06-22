@@ -1,0 +1,10 @@
+/* 04_bad_array_decl.lc — INVÁLIDO: declaração de array sem a palavra 'of'
+ * Sintaxe correta: array 10 of int v ;
+ * Erro esperado: syntax error
+ */
+
+array 10 int v ;
+
+fun void main() {
+    print v[0] ;
+}

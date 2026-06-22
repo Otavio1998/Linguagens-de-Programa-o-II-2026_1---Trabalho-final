@@ -1,0 +1,8 @@
+/* 06_bad_fun.lc — INVÁLIDO: função definida sem a palavra-chave 'fun'
+ * Sintaxe correta: fun void main() { ... }
+ * Erro esperado: syntax error (parser espera 'fun' para uma declaração de função)
+ */
+
+void main() {
+    print "ola" ;
+}

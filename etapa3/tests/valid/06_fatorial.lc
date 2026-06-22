@@ -1,0 +1,16 @@
+/* 06_fatorial.lc — Função recursiva com if/return
+ * Testa integração completa: chamada, parâmetros, if, return
+ */
+fun int fatorial(int n) {
+    if (n <= 1) {
+        return 1 ;
+    } else {
+        let r := fatorial(n - 1) ;
+        return n * r ;
+    }
+}
+
+fun void main() {
+    let f := fatorial(5) ;
+    print f ;
+}

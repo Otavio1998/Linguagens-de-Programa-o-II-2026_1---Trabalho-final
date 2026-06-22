@@ -1,0 +1,11 @@
+/* 04_for.lc — laço for
+ * TAC esperado: init, rótulo, cond, body, step, goto
+ */
+fun void main() {
+    let prod := 1 ;
+    let i := 1 ;
+    for (i := 1 ; i <= 5 ; i := i + 1) {
+        prod := prod * i ;
+    }
+    print prod ;
+}

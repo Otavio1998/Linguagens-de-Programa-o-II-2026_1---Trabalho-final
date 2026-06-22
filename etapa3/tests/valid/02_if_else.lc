@@ -1,0 +1,12 @@
+/* 02_if_else.lc — if com else
+ * TAC esperado: dois ramos, goto para pular else
+ */
+fun void main() {
+    let a := 3 ;
+    let b := 7 ;
+    if (a == b) {
+        print 1 ;
+    } else {
+        print 0 ;
+    }
+}
